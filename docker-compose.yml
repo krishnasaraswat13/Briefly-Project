@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: briefly-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    environment:
+     
+      - MONGODB_URI=mongodb+srv://krishnasaraswat:Krishna123@cluster0.uy9vq1u.mongodb.net/BrieflyDB?retryWrites=true&w=majority&appName=Cluster0
+    volumes:
+      - ./backend/uploads:/app/uploads
+    restart: unless-stopped
+
+  frontend:
+    build: 
+      context: ./frontend
+      args:
+        - VITE_BACKEND_URL=http://localhost:3000
+    container_name: briefly-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
