@@ -13,7 +13,7 @@ const login = async (email, password) => {
     throw error.data || { error: 'An unknown error occurred' };
   }
 };
-
+//
 const register = async (username, email, password) => {
   try {
     const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
