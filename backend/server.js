@@ -24,11 +24,8 @@ connectDB();
 // Middleware to handle cors - Updated for Production
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173', 
-      'https://briefly-project.vercel.app' 
-    ],
-    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+    origin: 'https://briefly-project.vercel.app', // NO trailing slash here
+    methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'], // Add OPTIONS explicitly
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   })
