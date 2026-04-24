@@ -7,7 +7,7 @@ The key idea behind Briefly is that all outputs are strictly based on the upload
 This project was built to demonstrate real-world AI integration in a production-like environment.
 
 **Live Demo:** 
-
+https://briefly-project.vercel.app/
 ---
 
 ## 🌟 Features
