@@ -67,3 +67,5 @@ This project was built to demonstrate real-world AI integration in a production-
 - Modular code structure
 - Secure authentication with JWT
 - Git-based workflow
+
+//npm run dev on backend and frontend both
