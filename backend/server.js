@@ -26,7 +26,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:5173', 
-      'https://briefly-project-ten.vercel.app' // Replace with your actual Vercel domain
+      'https://briefly-project.vercel.app' 
     ],
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization'],
